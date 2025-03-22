@@ -5,20 +5,20 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: smart-product-search-app
+    container_name: auto-veloz-search-app
     restart: unless-stopped
     working_dir: /var/www/
     volumes:
       - ./:/var/www
     networks:
-      - smart-product-search
+      - auto-veloz-search
     depends_on:
       db:
         condition: service_healthy
 
   db:
     image: mysql:8.0
-    container_name: smart-product-search-db
+    container_name: auto-veloz-search-db
     restart: unless-stopped
     environment:
       MYSQL_ROOT_HOST: '%'
@@ -32,7 +32,7 @@ services:
     volumes:
       - dbdata:/var/lib/mysql
     networks:
-      - smart-product-search
+      - auto-veloz-search
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_PASSWORD}"]
       interval: 10s
@@ -42,7 +42,7 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: smart-product-search-nginx
+    container_name: auto-veloz-search-nginx
     restart: unless-stopped
     ports:
       - "8000:80"
@@ -50,12 +50,12 @@ services:
       - ./:/var/www
       - ./docker/nginx:/etc/nginx/conf.d/
     networks:
-      - smart-product-search
+      - auto-veloz-search
     depends_on:
       - app
 
 networks:
-  smart-product-search:
+  auto-veloz-search:
     driver: bridge
 
 volumes:

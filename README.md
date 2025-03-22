@@ -1,160 +1,96 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
 # Auto Veloz Search
 
-A Laravel Livewire application that provides a powerful product search system with combined filters for categories and brands.
+Teste - Mecanismo de Busca com Filtros Combinados (Laravel + Livewire).
 
-## Features
+Este projeto consiste na implementação de um mecanismo de busca com filtros combinados utilizando Laravel e Livewire. O ambiente de desenvolvimento é baseado em Docker, e o repositório inclui toda a configuração necessária para a execução do projeto.
 
-- Real-time product search
-- Filter by product name
-- Filter by multiple categories
-- Filter by multiple brands
-- Persistent search parameters
-- Clear filters functionality
-- Responsive design
-- Automated tests
+## Funcionalidades
 
-## Requirements
+- Busca de produtos em tempo real
+- Filtro por nome do produto
+- Filtro por múltiplas categorias
+- Filtro por múltiplas marcas
+- Parâmetros de busca persistentes na URL
+- Funcionalidade de limpar filtros
+- Design responsivo
+- Testes automatizados
+- Ordenação por nome, preço e data
+
+## Requisitos
 
 - Docker
 - Docker Compose
-- PHP 8.2 or higher
+- PHP 8.2 ou superior
 - Composer
 - Node.js & NPM
 
-## Installation
+## Instalação
 
-1. Clone the repository:
+1. Clone o repositório:
 ```bash
-git clone https://github.com/yourusername/smart-product-search.git
-cd smart-product-search
+git clone https://github.com/seu-usuario/auto-veloz-search.git
+cd auto-veloz-search
 ```
 
-2. Copy the environment file:
+2. Copie o arquivo de ambiente:
 ```bash
 cp .env.example .env
 ```
 
-3. Start the Docker containers:
+3. Inicie os containers Docker:
 ```bash
 docker-compose up -d
 ```
 
-4. Install PHP dependencies:
+4. Instale as dependências PHP:
 ```bash
 docker-compose exec app composer install
 ```
 
-5. Install NPM dependencies:
+5. Instale as dependências NPM:
 ```bash
 npm install
 ```
 
-6. Generate application key:
+6. Gere a chave da aplicação:
 ```bash
 docker-compose exec app php artisan key:generate
 ```
 
-7. Run database migrations and seeders:
+7. Execute as migrações e seeders:
 ```bash
 docker-compose exec app php artisan migrate --seed
 ```
 
-8. Build frontend assets:
+8. Compile os assets:
 ```bash
 npm run build
 ```
 
-## Running the Application
+## Executando a Aplicação
 
-The application will be available at `http://localhost:8000`
+A aplicação estará disponível em `http://localhost:8000`
 
-## Running Tests
+## Executando os Testes
 
-To run the automated tests:
+Para executar os testes automatizados:
 
 ```bash
 docker-compose exec app php artisan test
 ```
 
-## Development
+## Desenvolvimento
 
-- The application uses Laravel Livewire for real-time functionality
-- Tailwind CSS is used for styling
-- The search component is located in `app/Livewire/ProductSearch.php`
-- Views are located in `resources/views/livewire/`
-- Tests are located in `tests/Feature/Livewire/`
+- A aplicação utiliza Laravel Livewire para funcionalidade em tempo real
+- Tailwind CSS é utilizado para estilização
+- O componente de busca está localizado em `app/Livewire/ProductSearch.php`
+- As views estão localizadas em `resources/views/livewire/`
+- Os testes estão localizados em `tests/Feature/Livewire/`
 
-## Project Structure
+## Estrutura do Projeto
 
 ```
-smart-product-search/
+auto-veloz-search/
 ├── app/
 │   ├── Livewire/
 │   │   └── ProductSearch.php
@@ -185,15 +121,3 @@ smart-product-search/
 ├── Dockerfile
 └── README.md
 ```
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
