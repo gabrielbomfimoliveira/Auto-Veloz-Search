@@ -57,6 +57,14 @@ npm install
 docker-compose exec app php artisan key:generate
 ```
 
+## Executando os Testes
+
+Para executar os testes automatizados:
+
+```bash
+docker-compose exec app php artisan test
+```
+
 7. Execute as migrações e seeders:
 ```bash
 docker-compose exec app php artisan migrate --seed
@@ -70,14 +78,6 @@ npm run build
 ## Executando a Aplicação
 
 A aplicação estará disponível em `http://localhost:8000`
-
-## Executando os Testes
-
-Para executar os testes automatizados:
-
-```bash
-docker-compose exec app php artisan test
-```
 
 ## Desenvolvimento
 
