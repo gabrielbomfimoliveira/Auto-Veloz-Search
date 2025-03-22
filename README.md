@@ -28,8 +28,8 @@ Este projeto consiste na implementação de um mecanismo de busca com filtros co
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/auto-veloz-search.git
-cd auto-veloz-search
+git clone https://github.com/gabrielbomfimoliveira/Auto-Veloz-Search.git
+cd Auto-Veloz-Search
 ```
 
 2. Copie o arquivo de ambiente:
